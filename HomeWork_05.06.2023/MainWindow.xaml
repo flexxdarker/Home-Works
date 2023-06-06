@@ -5,8 +5,95 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HomeWork_05._06._2023"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="600" Width="500">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Top" LastChildFill="False" Background="Black">
+            <Label Margin="1" Content="Men" Height="25" Width="25" DockPanel.Dock="Left" Background="DeepSkyBlue"/>
+            <Label Margin ="1" Content="Office 365" Height="25" Width="65" DockPanel.Dock="Left"  Foreground="White"/>
+            <Label Margin="1" Content="SharePoint" Height="25" Width="68" DockPanel.Dock="Left" Foreground="White"/>
+            <Label Margin="1" Content="Photo" Height="25" Width="25" DockPanel.Dock="Right" Background="Black" Foreground="White"/>
+            <Label Margin="1" Content="Quest" Height="25" Width="25" DockPanel.Dock="Right" Foreground="White"/>
+            <Label Margin="1" Content="Set" Height="25" Width="25" DockPanel.Dock="Right" Foreground="White"/>
+            <Label Margin="1" Content="Bell" Height="25" Width="25" DockPanel.Dock="Right" Foreground="White"/>
+            <Label Margin="1" Content="Sk" Height="25" Width="25" DockPanel.Dock="Right" Foreground="White"/>
+        </DockPanel>
+        <Canvas DockPanel.Dock="Top" Height="80">
+            <Label Content="Photo" Height="40" Width="40" Canvas.Top="15" Canvas.Left="15" Background="SkyBlue"/>
+            <Label Content="Sitio de exhibicion" Height="25" Canvas.Top="15" Canvas.Left="60"/>
+            <Label Content="Home" Height="25" Canvas.Top="35" Canvas.Left="60" FontSize="10"/>
+            <Label Content="Documents" Height="25" Canvas.Top="35" Canvas.Left="90" FontSize="10"/>
+            <Label Content="Pages" Height="25" Canvas.Top="35" Canvas.Left="145" FontSize="10"/>
+            <Label Content="Site Contents" Height="25" Canvas.Top="35" Canvas.Left="175" FontSize="10"/>
+            <Label Content="Edit" Height="25" Canvas.Top="35" Canvas.Left="240" FontSize="10" Foreground="MediumSlateBlue" FontWeight="Bold"/>
+            <Label Content="Search site" Canvas.Top="10" FontSize="7" Canvas.Right="12"/>
+            <TextBox Text="Search" Canvas.Top="25" Width="70" Canvas.Right="12"/>
+        </Canvas>
+        <Grid DockPanel.Dock="Top" Height="350">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.ColumnSpan="2" Background="DarkGray" BorderBrush="Black" BorderThickness="2"/>
+            <Grid Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                <Button Content="New" Grid.Column="1" Grid.Row="1" FontSize="10"/>
+                <Label Content="Lorem Ipsum" Grid.Row="3"  Grid.ColumnSpan="3"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                <Button Content="New" Grid.Column="1" Grid.Row="1" FontSize="10"/>
+                <Label Content="Lorem Ipsum" Grid.Row="3"  Grid.ColumnSpan="3"/>
+            </Grid>
+            <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="DarkGray" BorderBrush="Black" BorderThickness="2"/>
+            <Grid Grid.Column="2" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                <Button Content="New" Grid.Column="1" Grid.Row="1" FontSize="10"/>
+                <Label Content="Lorem Ipsum" Grid.Row="3"  Grid.ColumnSpan="3"/>
+            </Grid>
+            <Border Grid.ColumnSpan="2" Grid.Row="2" Background="DarkGray" BorderBrush="Black" BorderThickness="2"/>
+        </Grid>
+        <UniformGrid DockPanel.Dock="Bottom" Rows="2" Columns="4" Height="100" Margin="10">
+            <Button Margin="5">First</Button>
+            <Button Margin="5">First</Button>
+            <Button Margin="5">First</Button>
+            <Button Margin="5">First</Button>
+            <Button Margin="5">First</Button>
+            <Button Margin="5">First</Button>
+            <Button Margin="5">First</Button>
+            <Button Margin="5">First</Button>
+        </UniformGrid>
+    </DockPanel>
 </Window>
