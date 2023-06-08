@@ -9,7 +9,7 @@
     <DockPanel>
         <DockPanel DockPanel.Dock="Top" LastChildFill="False" Background="Black">
             <Label Margin="1" Content="Men" Height="25" Width="25" DockPanel.Dock="Left" Background="DeepSkyBlue"/>
-            <Label Margin ="1" Content="Office 365" Height="25" Width="65" DockPanel.Dock="Left"  Foreground="White"/>
+            <Label Margin="1" Content="Office 365" Height="25" Width="65" DockPanel.Dock="Left"  Foreground="White"/>
             <Label Margin="1" Content="SharePoint" Height="25" Width="68" DockPanel.Dock="Left" Foreground="White"/>
             <Label Margin="1" Content="Photo" Height="25" Width="25" DockPanel.Dock="Right" Background="Black" Foreground="White"/>
             <Label Margin="1" Content="Quest" Height="25" Width="25" DockPanel.Dock="Right" Foreground="White"/>
