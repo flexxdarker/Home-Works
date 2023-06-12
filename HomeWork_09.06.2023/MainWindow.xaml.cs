@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,10 +22,24 @@ namespace HomeWork_09._06._2023
     public partial class MainWindow : Window
     {
         private ViewModel viewmodel = new();
+
+        ObservableCollection<string> colors;
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = viewmodel;
+            colors = new ObservableCollection<string>();
+            ColorListView.ItemsSource = colors;
+        }
+
+        private void addBtn_Click(object sender, RoutedEventArgs e)
+        {
+            colors.Add(viewmodel.ToString());
+        }
+
+        private void deleteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            colors.RemoveAt(ColorListView.SelectedIndex);
         }
     }
     [PropertyChanged.AddINotifyPropertyChangedInterface()]
@@ -38,6 +53,10 @@ namespace HomeWork_09._06._2023
         public ViewModel()
         {
 
+        }
+        public override string ToString()
+        {
+            return color.ToString();
         }
     }
 }
