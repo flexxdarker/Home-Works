@@ -20,9 +20,24 @@ namespace HomeWork_09._06._2023
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ViewModel viewmodel = new();
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = viewmodel;
+        }
+    }
+    [PropertyChanged.AddINotifyPropertyChangedInterface()]
+    public class ViewModel
+    {
+        public Color color => Color.FromArgb(alpha, red, green, blue);
+        public byte alpha { get; set; }
+        public byte red { get; set; }
+        public byte green { get; set; }
+        public byte blue { get; set; }
+        public ViewModel()
+        {
+
         }
     }
 }

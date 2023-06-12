@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HomeWork_09._06._2023"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="300" Width="400">
+    <DockPanel LastChildFill="False" Background="BlanchedAlmond">
+        <DockPanel DockPanel.Dock="Top">
+            <Border Width="25" DockPanel.Dock="Right" Margin="2">
+                <Border.Background>
+                    <SolidColorBrush Color="{Binding color}"/>
+                </Border.Background>
+            </Border>
+            <Grid DockPanel.Dock="Right">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="35"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="27"/>
+                    <RowDefinition Height="27"/>
+                    <RowDefinition Height="27"/>
+                    <RowDefinition Height="27"/>
+                </Grid.RowDefinitions>
+                <Label Content="Alpha: "/>
+                <Label Content="{Binding ElementName=Alpha, Path=Value}" Grid.Column="1"/>
+                <Slider x:Name="Alpha" Value="{Binding alpha}" Grid.Column="2" Maximum="255" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                <Label Content="Red: " Grid.Row="1"/>
+                <Label Content="{Binding ElementName=Red, Path=Value}" Grid.Row="1" Grid.Column="1"/>
+                <Slider x:Name="Red" Grid.Row="1" Value="{Binding red}" Grid.Column="2" Maximum="255" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                <Label Content="Green: " Grid.Row="2"/>
+                <Label Content="{Binding ElementName=Green, Path=Value}" Grid.Row="2" Grid.Column="1"/>
+                <Slider x:Name="Green" Grid.Row="2" Value="{Binding green}" Grid.Column="2" Maximum="255" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                <Label Content="Blue: " Grid.Row="3"/>
+                <Label Content="{Binding ElementName=Blue, Path=Value}" Grid.Row="3" Grid.Column="1"/>
+                <Slider x:Name="Blue" Grid.Row="3" Value="{Binding blue}" Grid.Column="2" Maximum="255" TickFrequency="1" IsSnapToTickEnabled="True"/>
+                <Label/>
+            </Grid>
+        </DockPanel>
+        <StackPanel Orientation="Horizontal" Height="25" DockPanel.Dock="Top">
+            <Button x:Name="addBtn" Content="Add" Width="40" Height="20" Margin="2"/>
+            <Button x:Name="deleteBtn" Content="Delete" Width="40" Height="20" Margin="2"/>
+        </StackPanel>
+    </DockPanel>
 </Window>
